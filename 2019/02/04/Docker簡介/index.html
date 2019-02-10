@@ -5,22 +5,20 @@
   
 
   
-  <title>Gradle學習筆記 | JustinYang技術日誌</title>
+  <title>Docker簡介 | JustinYang技術日誌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Gradle是什麼?Gradle類似於Ant，Maven，是一種建構工具，提供我們自動化編譯、打包、單元測試、集成測試、專案部署等功能; 有比Maven更高的靈活性(Maven本身要做到客製化的建構極不容易)，也有比Ant更高度的標準化的建構方式(Ant的建構並沒有一個可參考的準則)。       優點 具有表達性、可維護性，基於Groovy的領域特定語言(DSL) 標準化的專案布局和生命週期，又">
-<meta name="keywords" content="自動化, 構建工具, Gradle">
+  <meta name="description" content="什麼是Docker? 是一個輕量級的作業系統虛擬化解決方案 Docker的基礎是基於Linux容器技術 有傳統VM的資源、配置獨立性，又具有更高的可攜性 Docker Container彼此共享OS Kernel，但又可以透過Namespace、Cgroup等技術來達到環境、系統資源的隔離">
+<meta name="keywords" content="Docker, 微服務">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradle學習筆記">
-<meta property="og:url" content="http://yoursite.com/2018/12/24/Gradle學習筆記/index.html">
+<meta property="og:title" content="Docker簡介">
+<meta property="og:url" content="http://yoursite.com/2019/02/04/Docker簡介/index.html">
 <meta property="og:site_name" content="JustinYang技術日誌">
-<meta property="og:description" content="Gradle是什麼?Gradle類似於Ant，Maven，是一種建構工具，提供我們自動化編譯、打包、單元測試、集成測試、專案部署等功能; 有比Maven更高的靈活性(Maven本身要做到客製化的建構極不容易)，也有比Ant更高度的標準化的建構方式(Ant的建構並沒有一個可參考的準則)。       優點 具有表達性、可維護性，基於Groovy的領域特定語言(DSL) 標準化的專案布局和生命週期，又">
+<meta property="og:description" content="什麼是Docker? 是一個輕量級的作業系統虛擬化解決方案 Docker的基礎是基於Linux容器技術 有傳統VM的資源、配置獨立性，又具有更高的可攜性 Docker Container彼此共享OS Kernel，但又可以透過Namespace、Cgroup等技術來達到環境、系統資源的隔離">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="http://yoursite.com/2018/12/24/Gradle學習筆記/gradleLifeCycle.PNG">
-<meta property="og:updated_time" content="2018-12-24T16:37:30.021Z">
+<meta property="og:updated_time" content="2019-02-10T08:22:50.913Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gradle學習筆記">
-<meta name="twitter:description" content="Gradle是什麼?Gradle類似於Ant，Maven，是一種建構工具，提供我們自動化編譯、打包、單元測試、集成測試、專案部署等功能; 有比Maven更高的靈活性(Maven本身要做到客製化的建構極不容易)，也有比Ant更高度的標準化的建構方式(Ant的建構並沒有一個可參考的準則)。       優點 具有表達性、可維護性，基於Groovy的領域特定語言(DSL) 標準化的專案布局和生命週期，又">
-<meta name="twitter:image" content="http://yoursite.com/2018/12/24/Gradle學習筆記/gradleLifeCycle.PNG">
+<meta name="twitter:title" content="Docker簡介">
+<meta name="twitter:description" content="什麼是Docker? 是一個輕量級的作業系統虛擬化解決方案 Docker的基礎是基於Linux容器技術 有傳統VM的資源、配置獨立性，又具有更高的可攜性 Docker Container彼此共享OS Kernel，但又可以透過Namespace、Cgroup等技術來達到環境、系統資源的隔離">
   
     <link rel="alternate" href="../../../../atom.xml" title="JustinYang技術日誌" type="application/atom+xml">
   
@@ -71,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Gradle學習筆記" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-Docker簡介" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="" class="article-date">
-  <time datetime="2018-12-24T15:25:57.000Z" itemprop="datePublished">2018-12-24</time>
+  <time datetime="2019-02-03T17:01:21.000Z" itemprop="datePublished">2019-02-04</time>
 </a>
     
   </div>
@@ -85,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Gradle學習筆記
+      Docker簡介
     </h1>
   
 
@@ -93,24 +91,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Gradle是什麼"><a href="#Gradle是什麼" class="headerlink" title="Gradle是什麼?"></a>Gradle是什麼?</h2><p>Gradle類似於Ant，Maven，是一種建構工具，提供我們自動化編譯、打包、單元測試、集成測試、專案部署等功能; 有比Maven更高的靈活性(Maven本身要做到客製化的建構極不容易)，也有比Ant更高度的標準化的建構方式(Ant的建構並沒有一個可參考的準則)<br>。      </p>
-<h3 id="優點"><a href="#優點" class="headerlink" title="優點"></a>優點</h3><ul>
-<li>具有表達性、可維護性，基於Groovy的領域特定語言(DSL)</li>
-<li>標準化的專案布局和生命週期，又具有高度靈活性和對<em>預設值</em>的可配置姓</li>
-<li>支持建構由多個專案組成的專案結構</li>
-<li>支持依賴管理</li>
-<li>有高度相容性，能夠引入Ant的建構腳本或將Maven邏輯轉換成自身規則集的工具</li>
-<li>高度可擴展性及高效率的建構工具<br><br></li>
-</ul>
-<h3 id="建構的生命週期任務"><a href="#建構的生命週期任務" class="headerlink" title="建構的生命週期任務"></a>建構的生命週期任務</h3><p>如下圖，Gradle已經提供了默認的任務，以標準的目錄架構，知道執行任務時甚麼資源該去哪個目錄找尋，並且可以通過<code>約定屬性</code>來改變默認值; 如<code>約定屬性 sourceSets</code>，可以用來改變要執行compileJava任務時，要去哪裡取得Java原始碼。<br><img src="/2018/12/24/Gradle學習筆記/gradleLifeCycle.PNG" alt="gradleLiveCycle"></p>
+        <h2 id="什麼是Docker"><a href="#什麼是Docker" class="headerlink" title="什麼是Docker?"></a>什麼是Docker?</h2><ol>
+<li>是一個輕量級的作業系統虛擬化解決方案</li>
+<li>Docker的基礎是基於Linux容器技術</li>
+<li>有傳統VM的資源、配置獨立性，又具有更高的可攜性</li>
+<li>Docker Container彼此共享OS Kernel，但又可以透過<em>Namespace、Cgroup</em>等技術來達到環境、系統資源的隔離</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/24/Gradle學習筆記/" data-id="cjrymsrub0000no8bsjud9yf8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/04/Docker簡介/" data-id="cjryn5m9b0000w48b9zvsdxxu" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/自動化-構建工具-Gradle/">自動化, 構建工具, Gradle</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/Docker-微服務/">Docker, 微服務</a></li></ul>
 
     </footer>
   </div>
@@ -118,19 +112,19 @@
     
 <nav id="article-nav">
   
-    <a href="../../../../2019/02/04/Docker簡介/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../../09/VirtualBox安裝Centos7-滑鼠問題/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Docker簡介
+          VirtualBox安裝Centos7-滑鼠問題
         
       </div>
     </a>
   
   
-    <a href="../../06/Java並行設計筆記/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../../../2018/12/24/Gradle學習筆記/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Java並行設計筆記</div>
+      <div class="article-nav-title">Gradle學習筆記</div>
     </a>
   
 </nav>
@@ -181,23 +175,23 @@
       <ul>
         
           <li>
-            <a href="../../../../2019/02/09/VirtualBox安裝Centos7-滑鼠問題/">VirtualBox安裝Centos7-滑鼠問題</a>
+            <a href="../../09/VirtualBox安裝Centos7-滑鼠問題/">VirtualBox安裝Centos7-滑鼠問題</a>
           </li>
         
           <li>
-            <a href="../../../../2019/02/04/Docker簡介/">Docker簡介</a>
+            <a href="">Docker簡介</a>
           </li>
         
           <li>
-            <a href="">Gradle學習筆記</a>
+            <a href="../../../../2018/12/24/Gradle學習筆記/">Gradle學習筆記</a>
           </li>
         
           <li>
-            <a href="../../06/Java並行設計筆記/">Java並行設計筆記</a>
+            <a href="../../../../2018/12/06/Java並行設計筆記/">Java並行設計筆記</a>
           </li>
         
           <li>
-            <a href="../../04/Netty簡介/">Netty簡介</a>
+            <a href="../../../../2018/12/04/Netty簡介/">Netty簡介</a>
           </li>
         
       </ul>
