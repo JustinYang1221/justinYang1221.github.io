@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>VirtualBox安裝Centos7-滑鼠問題 | JustinYang技術日誌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在我的NoteBook的VirtualBox安裝CentOS7時，遇到了滑鼠不能正常運作的問題，因此特別筆記一下處理方式: step 1. 在VirtualBox開始安裝前，先確定在 設定/USB 內的 啟用USB控制器 是否在正確的選項，現在的電腦一般應該是要選擇USB2.0或是USB3.0，但我的選項一開始是設定在USB1.1(錯誤的選項)，因此注定我的滑鼠不能正常啟動。如下圖: 想要改變設定">
+<meta name="keywords" content="滑鼠異常, ExtenstionPack, USB2.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VirtualBox安裝Centos7-滑鼠問題">
+<meta property="og:url" content="http://yoursite.com/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/index.html">
+<meta property="og:site_name" content="JustinYang技術日誌">
+<meta property="og:description" content="在我的NoteBook的VirtualBox安裝CentOS7時，遇到了滑鼠不能正常運作的問題，因此特別筆記一下處理方式: step 1. 在VirtualBox開始安裝前，先確定在 設定/USB 內的 啟用USB控制器 是否在正確的選項，現在的電腦一般應該是要選擇USB2.0或是USB3.0，但我的選項一開始是設定在USB1.1(錯誤的選項)，因此注定我的滑鼠不能正常啟動。如下圖: 想要改變設定">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="http://yoursite.com/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/usb_setup1.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/usb_setup2.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/usb_setup4.PNG">
+<meta property="og:updated_time" content="2019-02-10T08:08:43.814Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VirtualBox安裝Centos7-滑鼠問題">
+<meta name="twitter:description" content="在我的NoteBook的VirtualBox安裝CentOS7時，遇到了滑鼠不能正常運作的問題，因此特別筆記一下處理方式: step 1. 在VirtualBox開始安裝前，先確定在 設定/USB 內的 啟用USB控制器 是否在正確的選項，現在的電腦一般應該是要選擇USB2.0或是USB3.0，但我的選項一開始是設定在USB1.1(錯誤的選項)，因此注定我的滑鼠不能正常啟動。如下圖: 想要改變設定">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/usb_setup1.PNG">
+  
+    <link rel="alternate" href="../../../../atom.xml" title="JustinYang技術日誌" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="../../../../css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="../../../../index.html" id="logo">JustinYang技術日誌</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="../../../../index.html" id="subtitle">Do The Right Thing, And Do Thing Rignt</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="../../../../index.html">Home</a>
+        
+          <a class="main-nav-link" href="../../../../archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="../../../../atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-VirtualBox安裝Centos7-滑鼠問題" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time datetime="2019-02-09T04:59:05.000Z" itemprop="datePublished">2019-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VirtualBox安裝Centos7-滑鼠問題
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在我的NoteBook的VirtualBox安裝CentOS7時，遇到了滑鼠不能正常運作的問題，因此特別筆記一下處理方式:</p>
+<p>step 1. 在VirtualBox開始安裝前，先確定在 <em>設定/USB</em> 內的 <em>啟用USB控制器</em> 是否在正確的選項，現在的電腦一般應該是要選擇<em>USB2.0</em>或是<em>USB3.0</em>，但我的選項一開始是設定在<em>USB1.1</em>(錯誤的選項)，因此注定我的滑鼠不能正常啟動。如下圖:<br><img src="/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/usb_setup1.PNG" alt="setup1"></p>
+<p>想要改變設定至USB2.0或USB3.0之前，若VirtualBox沒有安裝ExtensionPack，則會在下方看到警告提示訊息，請我們先將ExtensionPack下載安裝完成，才能將設定改至USB2.0~3.0。</p>
+<p>step 2. 下載、安裝<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">Oracle_VM_VirtualBox_Extension_Pack</a>，我安裝的版本是6.0.0，可自行選擇最新版本; 下載完成後，在VirtualBox的<em>檔案/喜好設定/擴充功能</em>選項內，指定下載下來的擴充檔案安裝即可，如下圖:<br><img src="/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/usb_setup2.PNG" alt="setup2"></p>
+<p>setp 3. 完成步驟2後，可以回過頭至step1將USB控制器切換至USB2.0或 USB3.0(看電腦支援的版本，現在一般應該都到3.0了)，再選到我們的虛擬機器後，點選<em>設定/系統/指標裝置</em>由<em>滑鼠</em>這個選項改為<em>USB平板電腦</em>，這邊說的滑鼠選項，看說明指的是針對PS/2的滑鼠，也因為筆電是沒有PS/2滑鼠，像我使用的就是筆電，若沒有將滑鼠這個選項改為USB平板電腦，我VM內的滑鼠是不能正常運作的，設定方式如下圖:<br><img src="/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/usb_setup4.PNG" alt="setup4"></p>
+<p>這篇並沒有記錄在VirtualBox安裝CentOS7以及網路設定，底下提供三篇參考網址:    </p>
+<ol>
+<li><a href="https://jimc1682000.blogspot.com/2015/09/centos-7-virtualbox.html?showComment=1548516895316#" target="_blank" rel="noopener">CentOS 7 最小安裝後在VirtualBox的網路設定筆記</a></li>
+<li><a href="">VirtualBox安裝Linux作業系統(CentOS)-完整安裝</a></li>
+<li><a href="">CentOS 6.3 最小安裝 (minimal) 初始化設定筆記-Will保哥</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/09/VirtualBox安裝Centos7-滑鼠問題/" data-id="cjrymsrur0003no8bz3obpch3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/滑鼠異常-ExtenstionPack-USB2-0/">滑鼠異常, ExtenstionPack, USB2.0</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../../../../2018/12/24/Gradle學習筆記/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Gradle學習筆記</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/Netty/">Netty</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/滑鼠異常-ExtenstionPack-USB2-0/">滑鼠異常, ExtenstionPack, USB2.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="../../../../tags/自動化-構建工具-Gradle/">自動化, 構建工具, Gradle</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="../../../../tags/Netty/" style="font-size: 10px;">Netty</a> <a href="../../../../tags/滑鼠異常-ExtenstionPack-USB2-0/" style="font-size: 10px;">滑鼠異常, ExtenstionPack, USB2.0</a> <a href="../../../../tags/自動化-構建工具-Gradle/" style="font-size: 10px;">自動化, 構建工具, Gradle</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../archives/2018/11/">十一月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="">VirtualBox安裝Centos7-滑鼠問題</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2018/12/24/Gradle學習筆記/">Gradle學習筆記</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2018/12/06/Java並行設計筆記/">Java並行設計筆記</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2018/12/04/Netty簡介/">Netty簡介</a>
+          </li>
+        
+          <li>
+            <a href="../../../../2018/11/18/在linux上安裝Docker/">在linux上安裝Docker</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Justin Yang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="../../../../index.html" class="mobile-nav-link">Home</a>
+  
+    <a href="../../../../archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
+  <script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="../../../../js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
